@@ -11,7 +11,9 @@ class CardPage extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(10.0),
         children: <Widget>[
-          _cardTipo1()
+          _cardTipo1(),
+          SizedBox(height: 30.0,),
+          _cardTipo2(),
         ],
       ),  
     );
@@ -44,6 +46,31 @@ class CardPage extends StatelessWidget {
     );
 
 
+  }
+
+  Widget _cardTipo2() {
+    return Card(
+      child: Column(
+        children: <Widget>[
+          
+          FadeInImage(
+            image: NetworkImage('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg'),
+            placeholder: AssetImage('assets/jar-loading.gif'),
+            fadeInDuration: Duration(milliseconds: 200),
+            height: 300.0,
+            fit: BoxFit.cover,
+          ),
+
+          // Image(
+          //   image: NetworkImage('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg')
+          // ),
+          Container(
+            padding: EdgeInsets.all(10.0),
+            child: Text('No tengo idea de que poner')
+          ),
+        ],
+      ),
+    );
   }
 
 }
